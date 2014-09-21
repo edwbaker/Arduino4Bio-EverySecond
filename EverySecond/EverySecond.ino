@@ -7,7 +7,7 @@ void setup() {
 
 void loop() {
   count++;
-  if (millis() > last_time+1000) {
+  if (millis() - last_time >= 1000) {
     Serial.println(count);
     count = 0;
     last_time = millis();
